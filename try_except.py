@@ -25,20 +25,20 @@
 # elif score <0.6:
 #     print('F')
 
-def computepay(h, r):
-    if h <= 40:
-        gross_pay = h * r
-    else:
-        overtime_hrs = h - 40
-        gross_pay = (overtime_hrs * (r * 1.5) + (40 * r))
-    return gross_pay
+# def computepay(h, r):
+#     if h <= 40:
+#         gross_pay = h * r
+#     else:
+#         overtime_hrs = h - 40
+#         gross_pay = (overtime_hrs * (r * 1.5) + (40 * r))
+#     return gross_pay
 
-#input hours
-hrs = float(input("Enter Hours: "))
+# #input hours
+# hrs = float(input("Enter Hours: "))
 
-#input rate
-rate = float(input('Enter Rate: '))
+# #input rate
+# rate = float(input('Enter Rate: '))
 
-#func called computepay()
-p = computepay(hrs, rate )
-print("Pay", p)
+# #func called computepay()
+# p = computepay(hrs, rate )
+# print("Pay", p)
