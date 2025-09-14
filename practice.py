@@ -45,37 +45,67 @@
 
 # print("Maximum", largest)
 
-largest = None
-smallest = None
-nums = []
-invalid_inputs = []
-while True:
-    num = input('Enter a Number: ')
-    if num == 'done':
-        break
-    try:
-        fval = int(num)
-    except:
-         print('Invalid input')
-         continue
+# largest = None
+# smallest = None
+# nums = []
+# invalid_inputs = []
+# while True:
+#     num = input('Enter a Number: ')
+#     if num == 'done':
+#         break
+#     try:
+#         fval = int(num)
+#     except:
+#          print('Invalid input')
+#          continue
     
-    if fval not in nums:
-        nums.append(fval)
-    for i in nums:
-        if smallest is None:
-            smallest = i
-        elif i < smallest:
-            smallest = i
-        if largest is None:
-            largest = i
-        elif i > largest:
-            largest = i
+#     if fval not in nums:
+#         nums.append(fval)
+#     for i in nums:
+#         if smallest is None:
+#             smallest = i
+#         elif i < smallest:
+#             smallest = i
+#         if largest is None:
+#             largest = i
+#         elif i > largest:
+#             largest = i
 
  
-print('Maximun', largest)
-print('Minimun', smallest)
+# print('Maximun', largest)
+# print('Minimun', smallest)
     
-    
+
+fname = input("Enter file name: ")
+if len(fname) < 1:
+    fname = "mbox-short.txt"
+
+fh = open(fname)
+count = 0
+for line in fh:
+    while line.startswith('From'):
+        count = count +1
+        nline = line.split()
+        print(nline[1])
+        print(count)    
+
+print("There were", count, "lines in the file with From as the first word")
+
+fname = input("Enter file name: ")
+if len(fname) < 1:
+    fname = "mbox-short.txt"
+
+fh = open(fname)
+count = 0
+for line in fh:
+    while line.startswith('From'):
+        count = count+1
+        nline = line.split()
+        
+print(nline[1])
+
+print("There were", count, "lines in the file with From as the first word")
+
    
 
 
