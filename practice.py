@@ -76,36 +76,75 @@
 # print('Minimun', smallest)
     
 
-fname = input("Enter file name: ")
-if len(fname) < 1:
-    fname = "mbox-short.txt"
+# fname = input("Enter file name: ")
+# if len(fname) < 1:
+#     fname = "mbox-short.txt"
 
-fh = open(fname)
-count = 0
-for line in fh:
-    while line.startswith('From'):
-        count = count +1
-        nline = line.split()
-        print(nline[1])
-        print(count)    
+# fh = open(fname)
+# count = 0
+# for line in fh:
+#     while line.startswith('From'):
+#         count = count +1
+#         nline = line.split()
+#         print(nline[1])
+#         print(count)    
 
-print("There were", count, "lines in the file with From as the first word")
+# print("There were", count, "lines in the file with From as the first word")
 
-fname = input("Enter file name: ")
-if len(fname) < 1:
-    fname = "mbox-short.txt"
+# fname = input("Enter file name: ")
+# if len(fname) < 1:
+#     fname = "mbox-short.txt"
 
-fh = open(fname)
-count = 0
-for line in fh:
-    while line.startswith('From'):
-        count = count+1
-        nline = line.split()
+# fh = open(fname)
+# count = 0
+# for line in fh:
+#     if line.startswith('From'):
+#         count = count+1
+#         nline = line.split()
         
-print(nline[1])
+# print(nline[1])
 
-print("There were", count, "lines in the file with From as the first word")
+# print("There were", count, "lines in the file with From as the first word")
 
-   
+# #    -------------
+
+# name = input("Enter file:")
+# if len(name) < 1:
+#     name = "mbox-short.txt"
+# handle = open(name)
+
+# dic = {}
+
+# for line in handle:
+#     if line.startswith('From '):
+#         words = line.split()
+#         email = words[1]
+#         dic[email] = dic.get(email, 0) +1
+
+# topemail= None
+# amount=None
+# for word,count in dic.items():
+#     if amount is None or count > amount:
+#         amount = count
+#         topemail=word
+        
+# print(topemail, amount)
 
 
+# tu = ('h',1), ('j',7)
+# result = ('h',1) > ('j',7)
+# print(result)
+# print(tu)
+
+# d = {'v': 4, 'l': 10, 'm': 2}
+# print(sorted(d.items()))
+# for k,v in sorted(d.items()):
+#     print(k,v)
+
+# tmp = list()
+# for k,v in d.items():
+#     tmp.append((v,k))
+# print(tmp)
+
+# tmp = sorted(tmp, reverse=True)
+# print(tmp)
