@@ -148,3 +148,29 @@
 
 # tmp = sorted(tmp, reverse=True)
 # print(tmp)
+
+
+# # ___________
+# name = input("Enter file:")
+# if len(name) < 1:
+#     name = "mbox-short.txt"
+# handle = open(name)
+
+
+# counts = dict()
+
+# for line in handle:
+#     if line.startswith('From '):
+#         words = line.split()
+#         time = words[5]
+#         hour = time.split(':')[0]
+#         counts[hour] = counts.get(hour, 0) +1
+
+# for k,v in sorted(counts.items()):
+#     print(k,v)
+# _____________
+
+# List comprehension
+c = {'a': 10, 'b': 1, 'c':22}
+# for all, create me tuples that v,k for .....
+# print(sorted([(v,k) for k,v in c.items()]))
