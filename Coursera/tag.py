@@ -33,31 +33,32 @@ for tag in tags:
 print('Count', count)
 print('Sum', total)
 
+# --------------------------------------
 
-import urllib.request
-from bs4 import BeautifulSoup
+# import urllib.request
+# from bs4 import BeautifulSoup
 
-url = input('Enter - ')
-html = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(html, 'html.parser')
+# url = input('Enter - ')
+# html = urllib.request.urlopen(url).read()
+# soup = BeautifulSoup(html, 'html.parser')
 
-# Retrieve all the span tags
-tags = soup('span')
+# # Retrieve all the span tags
+# tags = soup('span')
 
-total = 0
-count = 0
+# total = 0
+# count = 0
 
-for tag in tags:
-    # Extract the text content of the span tag
-    number = tag.contents[0]
-    # Convert the text to integer
-    try:
-        num = int(number)
-        total += num
-        count += 1
-    except:
-        # If conversion fails, skip this tag
-        continue
+# for tag in tags:
+#     # Extract the text content of the span tag
+#     number = tag.contents[0]
+#     # Convert the text to integer
+#     try:
+#         num = int(number)
+#         total += num
+#         count += 1
+#     except:
+#         # If conversion fails, skip this tag
+#         continue
 
-print('Count', count)
-print('Sum', total)
+# print('Count', count)
+# print('Sum', total)
