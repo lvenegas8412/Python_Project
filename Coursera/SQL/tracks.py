@@ -31,11 +31,12 @@ CREATE TABLE Track (
         AUTOINCREMENT UNIQUE,
     title TEXT  UNIQUE,
     album_id  INTEGER,
+    genre_id  INTEGER,              
     len INTEGER, rating INTEGER, count INTEGER
 );
 ''')
 
-handle = open('/Users/luisvenegas/Desktop/Coding/Python_Project/Coursera/SQL/tracks.csv')
+handle = open('SQL/tracks.csv')
 
 # Another One Bites The Dust,Queen,Greatest Hits,55,100,217103
 #   0                          1      2           3  4   5
@@ -70,8 +71,8 @@ for line in handle:
     album_id = cur.fetchone()[0]
 
     cur.execute('''INSERT OR REPLACE INTO Track
-        (title, album_id, len, rating, count) 
-        VALUES ( ?, ?, ?, ?, ? )''', 
-        ( name, album_id, length, rating, count ) )
+        (title, album_id, genre_id, len, rating, count) 
+        VALUES ( ?, ?, ?, ?, ?,? )''', 
+        ( name, album_id, genre_id, length, rating, count ) )
 
     conn.commit()
